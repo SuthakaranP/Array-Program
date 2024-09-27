@@ -1,0 +1,45 @@
+import java.util.*;
+class sectionsort
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int size = sc.nextInt();
+        int arr[] = new int[size];
+        int temp  =0;
+        System.out.print("Initial order: ");
+        for(int i =0;i<size;i++)
+        {
+            arr[i] = sc.nextInt();
+            System.out.print(arr[i]+" ");
+            
+        }
+        System.out.println();
+        for(int i =0;i<size-1;i++)
+        {
+            int min = i;
+            for(int j=i+1;j<size;j++)
+            {
+                if(arr[min]>arr[j])
+                {
+                    min = j;
+                }
+            }
+            temp = arr[min];
+            arr[min] = arr[i];
+            arr[i] = temp;
+        
+        for(int arrs:arr)
+        {
+            System.out.print(arrs+" ");
+        }
+        System.out.println();
+        }
+        System.out.println("After sorted: ");
+         for(int arrs:arr)
+        {
+            System.out.print(arrs+" ");
+        }
+        
+    }
+}
